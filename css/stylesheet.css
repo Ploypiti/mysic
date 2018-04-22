@@ -1,0 +1,184 @@
+/*PRIMARY STYLES*/
+
+/*fonts*/
+* {
+  font-family: 'raleway';
+}
+
+/*font weight*/
+placeholder {
+  font-weight: lighter;
+}
+.main {
+  font-weight: 500;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 600;
+}
+h1 {
+  font-size: 5em;
+}
+.bold {
+  font-weight: 900;
+}
+
+/*primary color*/
+/*CSS variables*/
+:root {
+    --primary: #5270b6;
+    --primary-dark: #425a94;
+    --secondary: #f7ca11;
+    --secondary-light: #f7ca11;
+    --dark: #333;
+    --gray: #efefef;
+}
+/*for HTML classes*/
+.primary {
+  color: #5270b6;
+}
+.btn.primary, div.primary {
+  background-color: #5270b6;
+}
+/*darker primary color*/
+.primary.dark {
+  color: #425a94;
+}
+.btn.primary.dark, div.primary.dark {
+  background-color: #425a94;
+}
+
+/*secondary color*/
+.secondary {
+  color: #f7ca11;0
+}
+.btn.secondary, div.secondary {
+  background-color: #f7ca11;
+}
+/*lighter secondary color*/
+.secondary.light {
+  color: #fbe488;
+}
+.btn.secondary.light, div.secondary.light {
+  background-color: #fbe488;
+}
+
+/*Other text colors*/
+.white{
+  color: white;
+}
+
+.dark {
+  color: var(--dark)
+}
+
+.black {
+  color: black;
+}
+
+/*Float*/
+
+/*align logo*/
+.floatleft {
+	float: left;
+}
+
+/*and other stuffs*/
+.floatright {
+	float: right;
+}
+
+/*NAVIGATION BAR*/
+nav {
+  padding-bottom: 50px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: var(--dark);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: 0.3s;
+}
+
+li a:hover {
+    color: var(--secondary);
+}
+
+li a.current {
+  color: var(--secondary);
+}
+
+.signup {
+  padding-top: 7px;
+}
+
+/*BUTTON*/
+.btn {
+  border-radius: 15px;
+  border: 2px var(--secondary) solid;
+  width: 100px;
+  height: 30px;
+  transition: 0.5s
+}
+
+.btn:hover {
+  background: none;
+  color: var(--secondary);
+}
+
+/*button wth black border*/
+.blackborder {
+  border-radius: 30px;
+  border: 4.5px black solid;
+  background: none;
+  width: 150px;
+  height: 45px;
+}
+
+.blackborder:hover {
+  background: black;
+  color: white;
+}
+
+/*BODY*/
+.container {
+  padding: 80px 130px 0 130px;
+}
+
+/*bottom border for header texts*/
+/*text postion*/
+.withborder {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+/*border postion*/
+.withborder::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 17px var(--primary) solid;
+  margin-top: -12px;
+  z-index: -1;
+}
+
+/*image position*/
+.mainimage {
+  margin-top: 50px;
+}
