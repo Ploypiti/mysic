@@ -1,8 +1,15 @@
 /*PRIMARY STYLES*/
 
+/*body*/
+body {
+  margin: 0;
+}
 /*fonts*/
 * {
   font-family: 'raleway';
+}
+p {
+  font-size: 0.7em;
 }
 
 /*font weight*/
@@ -38,6 +45,9 @@ h1 {
 }
 .btn.primary, div.primary {
   background-color: #5270b6;
+}
+.btn.primary {
+  border-color: var(--primary);
 }
 /*darker primary color*/
 .primary.dark {
@@ -88,10 +98,13 @@ h1 {
 }
 
 /*NAVIGATION BAR*/
+
 nav {
+  margin: 12px;
   padding-bottom: 50px;
 }
 
+/*list*/
 ul {
     list-style-type: none;
     margin: 0;
@@ -132,10 +145,15 @@ li a.current {
   height: 30px;
   transition: 0.5s
 }
-
-.btn:hover {
+/*All of the hovers*/
+.btn.secondary:hover {
   background: none;
   color: var(--secondary);
+}
+.btn.primary:hover {
+  background: none;
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 /*button wth black border*/
@@ -146,15 +164,21 @@ li a.current {
   width: 150px;
   height: 45px;
 }
-
 .blackborder:hover {
   background: black;
   color: white;
 }
 
+/*White button*/
+.btn.whitebg {
+  background-color: white;
+  border: none;
+  color: var(--secondary);
+}
+
 /*BODY*/
 .container {
-  padding: 80px 130px 0 130px;
+  padding: 50px 130px 0 130px;
 }
 
 /*bottom border for header texts*/

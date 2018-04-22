@@ -1,0 +1,48 @@
+/*HORIZONTAL MENU BAR*/
+
+/*Set height and bg*/
+div.canvasmenu {
+  background: -moz-linear-gradient(left, var(--secondary) 0%,var(--secondary) 5%,var(--gray) 5%,var(--gray) 100%); /* FF3.6+ */
+  background: -webkit-linear-gradient(left, var(--secondary) 0%,var(--secondary) 5%,var(--gray) 5%,var(--gray) 100%); /* Chrome10+,Safari5.1+ */
+  padding: 20px;
+}
+
+/*icon size*/
+.ion {
+  color: white;
+  font-size: 2em;
+}
+
+/*canvas menu*/
+/*padding*/
+.canvas_m {
+  padding: 0 5px 30px 5px;
+}
+/*button margin*/
+.whitebg {
+  margin-right: 30px;
+}
+
+/*TOOLBARS*/
+.canvas_b {
+  height: 78.6vh;
+  width: 5%;
+  background-color: var(--primary);
+  text-align: center;
+}
+
+ul.toolbar {
+    list-style-type: none;
+    margin: 0;
+    padding-top: 30px;
+    padding-left: 2.5%;
+    width: 60px;
+}
+
+.toolbar_item {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    padding-bottom: 15px;
+    text-decoration: none;
+}
