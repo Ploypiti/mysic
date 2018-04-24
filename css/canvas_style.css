@@ -35,14 +35,140 @@ ul.toolbar {
     list-style-type: none;
     margin: 0;
     padding-top: 30px;
-    padding-left: 2.5%;
     width: 60px;
 }
 
 .toolbar_item {
+    width: 70px;
     display: block;
     color: #000;
-    padding: 8px 16px;
     padding-bottom: 15px;
+    padding-left: 0px;
     text-decoration: none;
+}
+
+.toolbar_expand {
+  display: inline;
+  width: 200px;
+  height: 78.6vh;
+  background-color: var(--primary-dark);
+  padding-top: 30px;
+}
+
+.intool {
+  margin-left: 25%;
+  margin-right: 25%;
+  color: var(--primary);
+}
+
+/*volume & trimmer slider*/
+.slider {
+  margin-left: 15%;
+  width: 80px;
+}
+
+/*handle*/
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.waveform {
+  height: 200px;
+  width: 95%;
+  background-color: var(--gray);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+/*dropdown*/
+.dropdown {
+    display: inline-block;
+    width: 100%;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 100px;
+    margin-left: 30px;
+    border-radius: 5px;
+    z-index: 1;
+    text-align: center;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: var(--black);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: var(--gray);}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*I'LL STOP FORMATTING FROM HERE CUZ DAMN I'M LAZY*/
+#volume_value, #trim_value {
+  margin-top: 0;
+  text-align: center;
+}
+
+.scv {
+  width: 500px;
+  overflow: hidden;
+}
+.slider_container {
+  width: 140px;
+  float:left;
+  padding-left:7px;
+}
+.valuebubble {
+  width: 30px;
+  height: 15px;
+  overflow: hidden;
+  padding: 2px 3px 5px 3px;
+  background-color: var(--secondary);
+  border-radius: 3px;
+}
+
+
+#audiofile {
+  width: 300px;
+  height: 70px;
+  padding: 30px;
+  margin-left: 100px;
+  margin-top: 80px;
+  background-color: var(--secondary-light);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  float: left;
+}
+
+#audiofile:focus {
+  background-color: var(--secondary);
+}
+
+#filename {
+  font-size: 1em;
 }

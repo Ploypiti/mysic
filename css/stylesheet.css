@@ -11,6 +11,18 @@ body {
 p {
   font-size: 0.7em;
 }
+.center {
+  text-align: center;
+}
+.toolitem {
+  font-size: 1em;
+  padding-left: 30px;
+}
+
+.unavail {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
 
 /*font weight*/
 placeholder {
@@ -37,7 +49,7 @@ h1 {
     --secondary: #f7ca11;
     --secondary-light: #f7ca11;
     --dark: #333;
-    --gray: #efefef;
+    --gray: #e5e5e5;
 }
 /*for HTML classes*/
 .primary {
