@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/canvas_style.css">
+    <link rel="stylesheet" type="text/css" href="css/ionicons.css">
+    <title>Mysic | Canvas</title>
+  </head>
+  <body>
+    <nav>
+      <ul class="main p50">
+        <li><a href="#home" class="logo floatleft"><img src="./image/logo.png" height="30"></a></li>
+        <div class="floatright">
+          <li><a href="/canvas" class="current">Canvas</a></li>
+          <li><a href="#contact">About</a></li>
+          <li><a href="#about">Sign In</a></li>
+          <li><a href="/signup" class="signup"><button type="button" class="btn secondary white main">Sign Up</button></a></li>
+        </div>
+      </ul>
+    </nav>
+    <div class="canvas">
+      <div class="canvasmenu">
+        <ul class="p50 canvas_m">
+          <li class="floatleft icon"><i class="ion ion-play"></i></li>
+          <div class="floatright">
+            <li><button type="button" class="btn whitebg main">Saved</button></li>
+            <li><button type="button" class="btn primary white main">Download</button></li>
+          </div>
+        </ul>
+      </div>
+      <div class="canvas_b floatleft">
+        <ul class="toolbar">
+          <li onclick="expand(this.id)" id="source"><a href="#home" class="toolbar_item"><i class="ion ion-music-note"></i><br><p class="white main">Source</p></a></li>
+          <li onclick="expand(this.id)" id="volume"><a href="#news" class="toolbar_item"><i class="ion ion-ios-volume-high" style="font-size: 3em;"></i><br><p class="white main">Volume</p></a></li>
+          <li onclick="expand(this.id)" id="effects"><a href="#contact" class="toolbar_item"><i class="ion ion-android-options"></i><br><p class="white main">Effects</p></a></li>
+          <li onclick="expand(this.id)" id="mic"><a href="#about" class="toolbar_item"><i class="ion ion-ios-mic-outline" style="font-size: 2.5em;"></i><br><p class="white main">Mic</p></a></li>
+        </ul>
+      </div>
+      <div class="toolbar_expand floatleft" id="toolbar_expand" style="display: none;">
+        <div class="expanded_source" id="expanded_source" style="display: none;">
+          <p class="main white toolitem">Filename_1</p>
+          <p class="main white toolitem">Filename_2</p>
+          <button type="button" class="btn whitebg main" style="margin-left: 30px;">Upload</button>
+        </div>
+        <div class="expanded_volume" id="expanded_volume" style="display: none;">
+          <p class="main white toolitem">Volume</p>
+          <div class="scv">
+            <div class="slider_container">
+              <input type="range" min="1" max="100" value="50" class="slider volume toolitem" id="volume_s">
+            </div>
+            <div class="valuebubble">
+              <p class="main white" id="volume_value"></p>
+            </div>
+          </div>
+        </div>
+        <div class="expanded_effects" id="expanded_effects" style="display: none;">
+          <p class="main white toolitem">Trim</p>
+          <div class="scv">
+            <div class="slider_container">
+              <input type="range" min="1" max="100" value="50" class="slider trim toolitem" id="trim_s">
+            </div>
+            <div class="valuebubble">
+              <p class="main white" id="trim_value"></p>
+            </div>
+          </div>
+          <div class="dropdown">
+            <p class="main white toolitem">Fade <i class="ion ion-android-arrow-dropdown"></i></p>
+            <div class="dropdown-content">
+              <a href="#">0.2s</a>
+              <a href="#">0.5s</a>
+              <a href="#">1s</a>
+              <a href="#">1.5s</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <p class="main white toolitem">Loop <i class="ion ion-android-arrow-dropdown"></i></p>
+            <div class="dropdown-content">
+              <a href="#">1 time</a>
+              <a href="#">2 times</a>
+              <a href="#">3 times</a>
+              <a href="#">4 times</a>
+            </div>
+          </div>
+          <p class="main white toolitem unavail">Merge</i></p>
+        </div>
+        <div class="expanded_mic" id="expanded_mic" style="display: none;">
+          <p class="main white toolitem">oi, nothin' here yet</p>
+        </div>
+      </div>
+      <div class="canvasbody">
+        <div id="audiofile">
+          <p class="main black" id="filename">filename_1</p>
+          <p class="main white" id="duration">02:00</p>
+        </div>
+        <div id="audiofile">
+          <p class="main black" id="filename">filename_2</p>
+          <p class="main white" id="duration">02:00</p>
+        </div>
+      </div>
+      <div class="waveform floatright"></div>
+    </div>
+  <script src="js/canvas.js"></script>
+  </body>
+</html>
