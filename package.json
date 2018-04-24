@@ -1,0 +1,29 @@
+{
+  "name": "mysic",
+  "version": "1.0.0",
+  "description": "Music & audio editor [WIP]",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nisaruj/mysic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nisaruj/mysic/issues"
+  },
+  "homepage": "https://github.com/nisaruj/mysic#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.9",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.0.16",
+    "passport": "^0.4.0",
+    "passport-local-mongoose": "^5.0.0"
+  }
+}
