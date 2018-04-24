@@ -4,11 +4,12 @@ Music &amp; audio editor [WIP]
 ### Todo
 - [ ] Frontend
   - [x] Homepage
-  - [ ] Canvas
-  - [ ] SignUp
-  - [ ] SignIn
+  - [x] Canvas (UI)
+  - [x] SignUp
+  - [x] SignIn
   - [ ] Responsiveness
 - [ ] Backend
   - [ ] Integrate Howler.js API
-  - [ ] SignUp & SignIn system
+  - [ ] Canvas (Backend)
+  - [x] SignUp & SignIn system
   - [ ] Allow file download (OMG not Node again)
