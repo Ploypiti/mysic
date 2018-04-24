@@ -18,7 +18,11 @@ p {
   font-size: 1em;
   padding-left: 30px;
 }
-
+a {
+  font-weight: bolder;
+  color: var(--black);
+  text-decoration: none;
+} 
 .unavail {
   opacity: 0.5;
   filter: alpha(opacity=50);

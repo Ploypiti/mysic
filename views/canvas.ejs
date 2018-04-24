@@ -9,12 +9,15 @@
   </head>
   <body>
     <nav>
-      <ul class="main p50">
+      <ul class="main">
         <li><a href="#home" class="logo floatleft"><img src="./image/logo.png" height="30"></a></li>
         <div class="floatright">
-          <li><a href="/canvas" class="current">Canvas</a></li>
-          <li><a href="#contact">About</a></li>
-          <li><a href="#about">Sign In</a></li>
+          <li><a href="/canvas">Canvas</a></li>
+          <% if(user) { %>
+            <li><a href="/signout"><%= user.username %></a></li>
+          <% } else { %>
+            <li><a href="/signin">Sign In</a></li>
+          <% } %>
           <li><a href="/signup" class="signup"><button type="button" class="btn secondary white main">Sign Up</button></a></li>
         </div>
       </ul>

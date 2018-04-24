@@ -1,6 +1,23 @@
-<form action="/signup" method="post">
-    Username: <input type="text" name="username">
-    Password: <input type="password" name="password">
-    Email: <input type="text" name="email">
-    <input type="submit">
-</form>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/signup_style.css">
+    <title>Sign Up | Mysic</title>
+  </head>
+  <body>
+    <form action="/signup" method="post">
+        <div class="signupcontainer">
+          <h2>Sign Up</h2>
+          <input type="text" placeholder="Username" name="username" required>
+          <input type="text" placeholder="Email" name="email" required>
+          <input type="password" placeholder="Password" name="psw" required>
+          <div>
+            <button type="submit" class="btn primary white main">Sign Up</button>
+            <p class="extra">or<a href="/signin"> Sign In</a></p>
+          </div>
+        </div>
+    </form>
+  </body>
+</html>

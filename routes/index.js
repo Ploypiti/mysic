@@ -9,7 +9,7 @@ router.get('/', function(req, res){
 
 //Get canvas
 router.get('/canvas', function(req, res){
-    res.render('canvas')
+    res.render('canvas', {user: req.user});
 })
 
 //Get login
