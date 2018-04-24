@@ -50,7 +50,7 @@ ul.toolbar {
 .toolbar_expand {
   display: inline;
   width: 200px;
-  height: 78.6vh;
+  height: 74.2vh;
   background-color: var(--primary-dark);
   padding-top: 30px;
 }

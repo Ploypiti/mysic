@@ -7,6 +7,7 @@ Music &amp; audio editor [WIP]
   - [ ] Canvas
   - [ ] SignUp
   - [ ] SignIn
+  - [ ] Responsiveness
 - [ ] Backend
   - [ ] Integrate Howler.js API
   - [ ] SignUp & SignIn system
