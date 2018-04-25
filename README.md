@@ -13,3 +13,6 @@ Music &amp; audio editor [WIP]
   - [ ] Canvas (Backend)
   - [x] SignUp & SignIn system
   - [ ] Allow file download (OMG not Node again)
+
+### Running on localhost
+Run npm start
