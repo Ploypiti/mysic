@@ -17,6 +17,9 @@
             <button type="submit" class="btn primary white main">Sign Up</button>
             <p class="extra">or<a href="/signin"> Sign In</a></p>
           </div>
+          <% if(message) { %>
+            <pre><%= message %></pre>
+          <% } %>
         </div>
     </form>
   </body>
