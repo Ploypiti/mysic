@@ -2,13 +2,13 @@ var passport = require('passport');
 var Account = require('../models/account');
 
 exports.post_register = function(req, res) {
-    var acc = new Account({ 
-        username : req.body.username, 
-        email: req.body.email, 
+    var acc = new Account({
+        username : req.body.username,
+        email: req.body.email,
         permission: "user"});
     Account.register(acc, req.body.password, function(err, user) {
         if (err) {
-            return res.render('register', { message : err.message })
+            return res.render('register', { message : "Username already exists" })
         }
         passport.authenticate('local')(req, res, function (){
             res.redirect('/');
@@ -26,7 +26,7 @@ exports.get_login = function(req, res) {
 
 exports.post_login = function(req, res) {
     passport.authenticate('local', function(err, user, info) {
-        if (err) { 
+        if (err) {
             return ;
         }
         if (!user) {
