@@ -17,7 +17,7 @@ router.get('/signin', auth.get_login)
 
 //Get register
 router.get('/signup', function(req, res){
-    res.render('register')
+    res.render('register', {message: null})
 })
 
 router.post('/signin', auth.post_login)
