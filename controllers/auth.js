@@ -8,7 +8,7 @@ exports.post_register = function(req, res) {
         permission: "user"});
     Account.register(acc, req.body.password, function(err, user) {
         if (err) {
-            return res.render('register', { user : user })
+            return res.render('register', { message : err.message })
         }
         passport.authenticate('local')(req, res, function (){
             res.redirect('/');
