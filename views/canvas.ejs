@@ -25,7 +25,7 @@
     <div class="canvas">
       <div class="canvasmenu">
         <ul class="p50 canvas_m">
-          <li class="floatleft icon"><i class="ion ion-play"></i></li>
+          <li class="floatleft icon"><i class="ion ion-play" id="playbutton"></i></li>
           <div class="floatright">
             <li><button type="button" class="btn whitebg main">Saved</button></li>
             <li><button type="button" class="btn primary white main">Download</button></li>
@@ -104,5 +104,29 @@
       <div class="waveform floatright"></div>
     </div>
   <script src="js/canvas.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.9/howler.js"></script>
+  <script language="JavaScript" type="text/javascript">
+    var sound = new Howl({
+      src: ['./audio/testsound.mp3'],
+      volume: 0.8
+    });
+
+    $('#playbutton').click(function(){
+    var clicked = $(this).data('clicked');
+
+    if ( clicked ) {
+      sound.play();
+      document.getElementById("playbutton").className = "ion ion-pause";
+    }
+
+    else{
+      sound.pause();
+      document.getElementById("playbutton").className = "ion ion-play";
+    }
+
+    $(this).data('clicked', !clicked);
+    });
+  </script>
   </body>
 </html>
