@@ -10,9 +10,9 @@ document.getElementById("toolbar_expand").style.display = "block";
 //volume
 var volume = document.getElementById("volume_s");
 var v_output = document.getElementById("volume_value");
-v_output.innerHTML = volume.value + "px";
+v_output.innerHTML = volume.value/100 + "px";
 volume.oninput = function() {
-  v_output.innerHTML = this.value + "px";
+  v_output.innerHTML = this.value/100 + "px";
 }
 //trim
 var trimtime = document.getElementById("trim_s");

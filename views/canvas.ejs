@@ -50,7 +50,7 @@
           <p class="main white toolitem">Volume</p>
           <div class="scv">
             <div class="slider_container">
-              <input type="range" min="1" max="100" value="50" class="slider volume toolitem" id="volume_s">
+              <input type="range" min="0" max="100" value="80" class="slider volume toolitem" id="volume_s">
             </div>
             <div class="valuebubble">
               <p class="main white" id="volume_value"></p>
@@ -61,7 +61,7 @@
           <p class="main white toolitem">Trim</p>
           <div class="scv">
             <div class="slider_container">
-              <input type="range" min="1" max="100" value="50" class="slider trim toolitem" id="trim_s">
+              <input type="range" min="1" max="10" value="5" class="slider trim toolitem" id="trim_s">
             </div>
             <div class="valuebubble">
               <p class="main white" id="trim_value"></p>
@@ -110,18 +110,18 @@
 
     var sound = new Howl({
       src: ['./audio/testsound.mp3'],
-      volume: Number(volume.value)
+      volume: 0.8
     });
 
     $('#playbutton').click(function(){
     var clicked = $(this).data('clicked');
-      
+
     var volume_s = document.getElementById('volume_s');
     volume_s.onchange = function(){
       //console.log(this.value)
       sound.volume(this.value/100)
     }
-    
+
     if ( clicked ) {
       sound.play();
       document.getElementById("playbutton").className = "ion ion-pause";
