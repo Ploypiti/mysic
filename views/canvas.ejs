@@ -107,14 +107,21 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.9/howler.js"></script>
   <script language="JavaScript" type="text/javascript">
+
     var sound = new Howl({
       src: ['./audio/testsound.mp3'],
-      volume: 0.8
+      volume: Number(volume.value)
     });
 
     $('#playbutton').click(function(){
     var clicked = $(this).data('clicked');
-
+      
+    var volume_s = document.getElementById('volume_s');
+    volume_s.onchange = function(){
+      //console.log(this.value)
+      sound.volume(this.value/100)
+    }
+    
     if ( clicked ) {
       sound.play();
       document.getElementById("playbutton").className = "ion ion-pause";
