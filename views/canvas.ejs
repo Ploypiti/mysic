@@ -115,7 +115,13 @@
 
     $('#playbutton').click(function(){
     var clicked = $(this).data('clicked');
-
+      
+    var volume_s = document.getElementById('volume_s');
+    volume_s.onchange = function(){
+      //console.log(this.value)
+      sound.volume(this.value/100)
+    }
+    
     if ( clicked ) {
       sound.play();
       document.getElementById("playbutton").className = "ion ion-pause";
