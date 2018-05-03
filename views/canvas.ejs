@@ -70,10 +70,10 @@
           <div class="dropdown">
             <p class="main white toolitem">Fade <i class="ion ion-android-arrow-dropdown"></i></p>
             <div class="dropdown-content">
-              <a id="fade" onclick="fade10()">1.0s</a>
-              <a id="fade" onclick="fade15()">1.5s</a>
-              <a id="fade" onclick="fade20()">2.0s</a>
-              <a id="fade" onclick="fade25()">2.5s</a>
+              <a id="fade" onclick="fade(10)">1.0s</a>
+              <a id="fade" onclick="fade(15)">1.5s</a>
+              <a id="fade" onclick="fade(20)">2.0s</a>
+              <a id="fade" onclick="fade(25)">2.5s</a>
             </div>
           </div>
           <p class="main white toolitem" onclick="loop()">Loop</p>
@@ -108,17 +108,8 @@
       }
     });
 
-    function fade10() {
-      sound.fade(1, 0, 1000)
-    }
-    function fade15() {
-      sound.fade(1, 0, 1500)
-    }
-    function fade20() {
-      sound.fade(1, 0, 2000)
-    }
-    function fade25() {
-      sound.fade(1, 0, 2500)
+    function fade(value) {
+      sound.fade(1,0,value*100)
     }
 
     function loop() {
