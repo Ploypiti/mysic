@@ -10,7 +10,7 @@ Music &amp; audio editor | [Demo](https://mmysic.herokuapp.com/)
   - [x] SignUp
   - [x] SignIn
   - [ ] Responsiveness
-  - [ ] Icon
+  - [x] Icon
 - [ ] Backend
   - [x] Integrate Howler.js API
   - [x] Upload system
