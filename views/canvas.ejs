@@ -42,9 +42,21 @@
       </div>
       <div class="toolbar_expand floatleft" id="toolbar_expand" style="display: none;">
         <div class="expanded_source" id="expanded_source" style="display: none;">
-          <p class="main white toolitem">Filename_1</p>
-          <p class="main white toolitem">Filename_2</p>
-          <button type="button" class="btn whitebg main" style="margin-left: 30px;">Upload</button>
+          <div class="files">
+            <p class="main white toolitem">Filename_1</p>
+            <p class="main white toolitem">Filename_2</p>
+          </div>
+          <form ref='uploadForm'
+          id='uploadForm'
+          action='http://localhost:8080/upload'
+          method='post'
+          encType="multipart/form-data">
+          <div class="upload-btn-wrapper">
+            <button class="btn whitebg main">Choose audio</button>
+            <input class="nb" type="file" name="sampleFile" />
+          </div>
+            <input class="nobtn main white" type='submit' value='Upload!' />
+          </form>
         </div>
         <div class="expanded_volume" id="expanded_volume" style="display: none;">
           <p class="main white toolitem">Volume</p>

@@ -22,7 +22,7 @@ a {
   font-weight: bolder;
   color: var(--black);
   text-decoration: none;
-} 
+}
 .unavail {
   opacity: 0.5;
   filter: alpha(opacity=50);
@@ -221,4 +221,34 @@ li a.current {
 /*image position*/
 .mainimage {
   margin-top: 50px;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.nobtn {
+  background: none;
+  border: none;
+}
+
+#uploadForm {
+  margin-left: 30px;
+  padding-top: 20px;
+}
+
+.files {
+  border-bottom: 3px solid white;
+  margin: 15px;
+  padding-bottom: 20px;
 }

@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser')
 var mongoose = require('mongoose')
 var passport = require('passport')
 var LocalStrategy  = require('passport-local').Strategy
+const fileUpload = require('express-fileupload');
 
 var server_port = process.env.PORT || 8080
 var session_secret = "ThIsiSsECreT"
@@ -37,3 +38,20 @@ var server = app.listen(server_port, function(){
 })
 
 app.use('/', index_route)
+
+// default options
+app.use(fileUpload());
+
+app.post('/upload', function(req, res) {
+  if (!req.files)
+    return res.status(400).send('No files were uploaded.');
+
+  let sampleFile = req.files.sampleFile;
+
+  sampleFile.mv(__dirname + '/filename.mp3', function(err) {
+    if (err)
+      return res.status(500).send(err);
+
+    res.send('Audio uploaded!');
+  });
+});
