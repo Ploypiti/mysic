@@ -39,7 +39,7 @@ var server = app.listen(server_port, function(){
 
 app.use('/', index_route)
 
-// default options
+// Audio Uploader
 app.use(fileUpload());
 
 app.post('/upload', function(req, res) {
@@ -55,3 +55,7 @@ app.post('/upload', function(req, res) {
     res.send('Audio uploaded!');
   });
 });
+
+//Favicon
+var favicon = require('serve-favicon')
+app.use(favicon(__dirname + '/favicon.ico'));
